@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Library</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">📚 Smart Library</div>
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#collections">Collections</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+
+
+<section class="hero" id="home">
+
+<h1>Welcome To Smart Library</h1>
+
+<p>
+Discover thousands of books, journals and learning resources in one place.
+</p>
+
+<button onclick="document.getElementById('collections').scrollIntoView()">
+Explore Books
+</button>
+
+</section>
+
+
+<section id="collections">
+
+<h2 class="title">Book Collections</h2>
+
+<div class="grid">
+
+<div class="card" onclick="showCategory('programming')">
+<h3>💻 Programming</h3>
+<p>Programming Books</p>
+</div>
+
+<div class="card" onclick="showCategory('novels')">
+<h3>📚 Novels</h3>
+<p>Popular Novels</p>
+</div>
+
+<div class="card" onclick="showCategory('science')">
+<h3>🔬 Science</h3>
+<p>Science Books</p>
+</div>
+
+<div class="card" onclick="showCategory('history')">
+<h3>🌍 History</h3>
+<p>History Books</p>
+</div>
+
+</div>
+
+<br><br>
+
+<div class="card2">
+
+<h3>Books List</h3>
+
+<ul id="bookList">
+<li>Select a category above.</li>
+</ul>
+
+</div>
+
+</section>
+
+
+<section id="services">
+
+<h2 class="title">Library Services</h2>
+
+<div class="grid">
+
+
+
+<div class="card">
+
+<h3>📖 Issue Book</h3>
+
+<select id="issueBook">
+<option>Select Book</option>
+</select>
+
+<br><br>
+
+<input
+type="text"
+id="studentName"
+placeholder="Student Name">
+
+<br><br>
+
+<input
+type="text"
+id="studentRoll"
+placeholder="Roll Number">
+
+<br><br>
+
+<button onclick="issueBook()">
+Issue Book
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>↩ Return Book</h3>
+
+<select id="returnBook">
+<option>Select Book</option>
+</select>
+
+<br><br>
+
+<input
+type="text"
+id="returnRoll"
+placeholder="Roll Number">
+
+<br><br>
+
+<button onclick="returnBook()">
+Return Book
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>💻 Digital Library</h3>
+
+<button onclick="showDigitalLibrary()">
+Open Digital Library
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>📅 Reservation</h3>
+
+<select id="reserveBook">
+<option>Select Book</option>
+</select>
+
+<br><br>
+
+<input
+type="text"
+id="reserveName"
+placeholder="Student Name">
+
+<br><br>
+
+<input
+type="text"
+id="reserveRoll"
+placeholder="Roll Number">
+
+<br><br>
+
+<button onclick="reserveBook()">
+Reserve Book
+</button>
+
+</div>
+
+</div>
+
+<br><br>
+
+<div class="card2">
+
+<h3>Result</h3>
+
+<p id="result">
+No action performed.
+</p>
+
+</div>
+
+</section>
+
+<button onclick="downloadExcel()">
+📥 Download Excel Report
+</button>
+
+
+
+<section>
+
+<h2 class="title">
+Digital Library
+</h2>
+
+<div class="card2">
+
+<div id="digitalBooks">
+
+<p>
+Click <strong>Open Digital Library</strong> to view digital books.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="contact">
+
+<h2 class="title">
+Contact Us
+</h2>
+
+<div class="card2">
+
+<h3>📍 Address</h3>
+<p>College Library</p>
+
+<br>
+
+<h3>📞 Phone</h3>
+<p>1234567890</p>
+
+<br>
+
+<h3>📧 Email</h3>
+<p>library@gmail.com</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© Smart Library | Summer Training Project</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
